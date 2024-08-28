@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #262a2f;
+}
+
+.container {
+    width: 400px;
+    background-color: #fff;
+    padding: 25px 35px;
+    position: absolute;
+    top: 46%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.container p {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Input field */
+
+.container input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #494eea;
+    outline: 0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.container button {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    background-color: rgb(13, 86, 195);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* QR code container */
+
+#qrBox {
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+/* QR code image container */
+
+#qrBox img {
+    width: 100%;
+    padding: 10px;
+}
+
+#qrBox.show-img {
+    max-height: 200px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+
+/* if no input is entered */
+
+#qrText.error {
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
